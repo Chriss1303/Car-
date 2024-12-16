@@ -1,0 +1,16 @@
+// JavaScript to manage the cart
+let cartCount = 0;
+
+// Get all the "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+// Get the cart count element
+const cartCountElement = document.getElementById('cart-count');
+
+// Add event listeners to the buttons
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    cartCount++;  // Increment cart count by 1
+    cartCountElement.textContent = cartCount;  // Update the cart count in the header
+  });
+});
